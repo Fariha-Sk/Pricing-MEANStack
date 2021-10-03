@@ -1,0 +1,25 @@
+ <div class="container">
+ 
+      <div class="row">
+    <div class="column1"*ngFor="let item1 of pricingData">
+      <app-card [item1]="item1"></app-card>
+    </div>
+    
+    <div class="column2">
+      <div class="col-lg-4"*ngFor="let item1 of pricingData2">
+            <app-card [item1]="item1"></app-card>
+          </div>
+      </div>
+    
+      <div class="column3">
+        <div class="col-lg-4"*ngFor="let item1 of pricingData3">
+              <app-card [item1]="item1"></app-card>
+            </div>
+        </div>
+
+  </div>
+
+    </div>
+
+
+<router-outlet></router-outlet>

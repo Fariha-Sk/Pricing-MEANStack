@@ -1,0 +1,33 @@
+.container{
+  background-image: linear-gradient(to right, #0169d8,rgb(122, 176, 247));
+  margin:20px;
+}
+
+.column1 {
+    float: left;
+    width: 28%;
+    padding: 50px;
+  }
+  .column2{
+    float: left;
+    width: 29%;
+    padding: 50px;
+  }
+  .column3
+    {
+      float: left;
+      padding: 50px;
+    }
+  
+  @media screen and (max-width: 600px) {
+    .column1,.column2,.column3 
+      {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+  
+   

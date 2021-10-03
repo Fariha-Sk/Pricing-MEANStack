@@ -1,0 +1,60 @@
+
+<div class=" card ">
+
+    <div class="card-body">
+
+        <br>
+        <h6 class="card-tittle text-muted text-center "><b>{{item1.type}}</b></h6>
+        <h6 class="card-price text-center ">${{item1.price}}
+            <span class="period">/{{item1.duration}}</span></h6>
+
+    <div style="width: 80%; height: 2px; border-bottom: 1.5px solid rgb(177, 177, 177);
+            position: relative; left: 9%;">
+       </div> <br>
+    
+        <div class="space" *ngFor='let detail of item1.details'>
+            <div class="text m-3 " *ngIf='detail.isAvailable; else notAvailable'>
+                <div class="text" *ngIf='detail.boldLetter;else normalLetter'>
+                    <i class="fas fa-check">✔</i><b>{{detail.title}}</b>
+                </div>
+
+             <!-- <div class="text" >
+                     <i class="fas fa-check">✔</i><b>{{detail.special}}</b> 
+                    <b>Unlimited</b> Free Subdomains   
+            </div> -->
+
+                        
+                    
+                <ng-template #normalLetter>
+                    <div class="text">
+                        <i class="fa fa-check">✔</i>{{detail.title}}
+                    </div>
+                </ng-template>
+            </div>
+            <ng-template #notAvailable>
+                <div class="text-muted m-3">
+                    <i class="fas fa-times">✖</i>{{detail.title}}
+                </div>
+             </ng-template>
+        </div>
+       
+        <br>
+        <div class="center">
+            <button class="btn"><b>BUTTON</b></button> 
+        </div>
+        <br>
+    </div>
+
+    <!-- <div class="space" *ngFor='let detail of item1.details'>
+        <div *ngIf='detail.specialisAvailable'> 
+            <ng-template #speacialisAvailable>
+                <div class="text" >
+                    <i class="fas fa-check">✔</i><b>{{detail.special}}
+                        <b>Unlimited</b> Free Subdomains
+                    </b>  
+                </div>
+            </ng-template>
+            </div>
+        </div> -->
+</div>
+
